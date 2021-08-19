@@ -9,7 +9,7 @@ formDOM.addEventListener('submit', async (e) => {
     const sessionLength = sessionLengthDOM.value
     const sleepLength = sleepLengthDOM.value
     const moodRating = moodRatingDOM.value
-    if (moodRating > 5 || moodRating < 1) {
+    if (!(moodRating === '') && (moodRating > 5 || moodRating < 1) ) {
         alert("Mood rating must be 1-5")
         return false
     }
