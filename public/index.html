@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meditation</title>
+  </head>
+  <body>
+    <form class="session-form">
+      <h4>New Session</h4>
+      <div class="form-control">
+        <h5>Meditation Session Length In Minutes</h5>
+        <input
+          type="text"
+          name="name"
+          class="session-length"
+          placeholder="e.g. 10"
+        />
+        <h5>Hours Slept Last Night</h5>
+        <input
+          type="text"
+          name="name"
+          class="sleep-length"
+          placeholder="e.g. 8"
+        />
+        <h5>Rate Your Mood 1-5</h5>
+        <input
+          type="text"
+          name="name"
+          class="mood-rating"
+          placeholder="e.g. 4"
+        />
+        <br />
+        <br />
+        <button type="submit" class="btn submit-btn">Submit</button>
+      </div>
+      <div>
+        <br />
+        <a href="http://localhost:5000/sessions">All Sessions</a>
+      </div>
+    </form>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
