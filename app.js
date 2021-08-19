@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const { getSessions, getSessionByID, addOrUpdateSession, deleteSession } = require('./dynamo')
 require('dotenv').config()
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 8081
 
 app.use(express.static('./public'))
 app.use(express.json())
@@ -70,6 +70,6 @@ app.delete('/sessions/:id', async (req,res) =>{
     }
 })
 
-app.listen(8080, () => {
+app.listen(8081, () => {
     console.log(`Listening on port ${PORT}`)
 })
