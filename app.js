@@ -70,6 +70,6 @@ app.delete('/sessions/:id', async (req,res) =>{
     }
 })
 
-app.listen(8081, () => {
+app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`)
 })
