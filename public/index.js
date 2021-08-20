@@ -38,7 +38,7 @@ formDOM.addEventListener('submit', async (e) => {
             payload.moodRating = moodRating
         }
         console.log(payload)
-        await axios.post('http://localhost:5000', payload)
+        await axios.post('http://joshhaver.com', payload)
     } catch (error) {
         console.log(error)
     }
