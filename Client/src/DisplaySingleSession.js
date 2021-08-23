@@ -8,7 +8,7 @@ export default function DisplaySingleSession({ session }) {
     const history = useHistory()
     let [isEditMode, setIsEditMode] = useState(false)
     let handleDelete = () => {
-        axios.delete('http://localhost:8081/api/v1/sessions/' + session.SessionID)
+        axios.delete('https://joshhaver.com/api/v1/sessions/' + session.SessionID)
         history.push('/sessions')
     }
     return (

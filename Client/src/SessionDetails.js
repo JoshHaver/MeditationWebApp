@@ -6,7 +6,7 @@ import DisplaySingleSession from './DisplaySingleSession'
 
 export default function SessionDetails() {
     let { id } = useParams()
-    const { data: session, isLoading, error } = useFetch('http://localhost:8081/api/v1/sessions/' + id)
+    const { data: session, isLoading, error } = useFetch('https://joshhaver.com/api/v1/sessions/' + id)
     return (
         <div className="session-details">
             {isLoading && <div>Loading...</div>}

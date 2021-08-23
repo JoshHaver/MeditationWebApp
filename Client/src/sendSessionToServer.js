@@ -26,9 +26,9 @@ let sendSessionToServer = async (method, sessionLength, sessionRating, sleepLeng
     console.log(payload)
     try {
         if (method === 'post'){
-            await axios.post('http://localhost:8081/api/v1/create', payload)
+            await axios.post('https://joshhaver.com/api/v1/create', payload)
         }else{
-            await axios.put('http://localhost:8081/api/v1/sessions/' + id, payload)
+            await axios.put('https://joshhaver.com/api/v1/sessions/' + id, payload)
         }
     } catch (error) {
         console.log('Error sending put/post request')
