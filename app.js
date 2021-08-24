@@ -9,13 +9,16 @@ const PORT = process.env.PORT || 8081
 
 app.use(cors(corsOptions))
 // send the react front end
-app.use(express.static(path.join(__dirname, 'home')))
+app.use(express.static(path.resolve('Client', 'build')))
 app.use(express.json())
 
 let logger = (req,res,next) => {
     console.log(req.body)
     next()
 }
+app.get('/', (req,res) => {
+    res.sendFile(path.join(__dirname, '/home/index.html'))
+})
 app.get('/meditation/api/v1/sessions', async (req,res) =>{
     try {
         const sessions = await getSessions()
