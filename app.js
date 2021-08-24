@@ -9,14 +9,14 @@ const PORT = process.env.PORT || 8081
 
 app.use(cors(corsOptions))
 // send the react front end
-app.use(express.static(path.resolve('Client', 'build')))
+app.use(express.static('/home'))
 app.use(express.json())
 
 let logger = (req,res,next) => {
     console.log(req.body)
     next()
 }
-app.get('/api/v1/sessions', async (req,res) =>{
+app.get('/meditation/api/v1/sessions', async (req,res) =>{
     try {
         const sessions = await getSessions()
         res.json(sessions)
@@ -28,7 +28,7 @@ app.get('/api/v1/sessions', async (req,res) =>{
 })
 
 
-app.get('/api/v1/sessions/:id', async (req,res) =>{
+app.get('/meditation/api/v1/sessions/:id', async (req,res) =>{
     const id = Number(req.params.id)
     try {
         const session = await getSessionByID(id)
@@ -40,7 +40,7 @@ app.get('/api/v1/sessions/:id', async (req,res) =>{
     }
 })
 
-app.post('/api/v1/create', logger, async (req,res) =>{
+app.post('/meditation/api/v1/create', logger, async (req,res) =>{
     const session = req.body
     try {
         const newSession = await addOrUpdateSession(session)
@@ -53,7 +53,7 @@ app.post('/api/v1/create', logger, async (req,res) =>{
 
 })
 
-app.put('/api/v1/sessions/:id', async (req,res) =>{
+app.put('/meditation/api/v1/sessions/:id', async (req,res) =>{
     const session = req.body
     try {
         
@@ -66,7 +66,7 @@ app.put('/api/v1/sessions/:id', async (req,res) =>{
     }
 })
 
-app.delete('/api/v1/sessions/:id', async (req,res) =>{
+app.delete('/meditation/api/v1/sessions/:id', async (req,res) =>{
     const id = Number(req.params.id)
     try {
         res.json(await deleteSession(id))
@@ -78,7 +78,7 @@ app.delete('/api/v1/sessions/:id', async (req,res) =>{
 })
 // sends if the user enters a url that isnt the homepage or an api link 
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve('client', 'build', 'index.html'));
+    res.sendFile(path.resolve('Client', 'build', 'index.html'));
 });
 
 app.listen(PORT, () => {

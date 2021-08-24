@@ -3,7 +3,7 @@ import LoadingScreen from './LoadingScreen'
 import useFetch from './useFetch'
 
 let Sessions = () => {
-    let {data: sessions, isLoading, error } = useFetch('https://joshhaver.com/api/v1/sessions')
+    let {data: sessions, isLoading, error } = useFetch('https://joshhaver.com/meditation/api/v1/sessions')
     return ( 
         <div className="show-sessions">
             {isLoading && <div className="loading-screen"><LoadingScreen /></div>}

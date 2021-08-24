@@ -5,9 +5,9 @@ let Navbar = () => {
       <nav className="navbar">
         <h1>Meditation Tracker</h1>
         <div className="links">
-          <Link to="/">Home</Link>
-          <Link to="/sessions">All Sessions</Link>
-          <Link to="/create" style={{ 
+          <a href="https://joshhaver.com">Home</a>
+          <Link to="/meditation/sessions">All Sessions</Link>
+          <Link to="/meditation/create" style={{ 
             color: 'white', 
             backgroundColor: '#f1356d',
             borderRadius: '8px' 

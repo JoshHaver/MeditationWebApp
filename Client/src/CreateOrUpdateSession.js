@@ -19,7 +19,7 @@ export default function CreateOrUpdateSession({ session, editMode }) {
         
         if (editMode) {
             // sends the user back a page to the edit 
-            history.push('/sessions')
+            history.push('/meditation/sessions')
         }else{
             // resets state to '' so that the inputs clear after form submit
             setSessionLength('')

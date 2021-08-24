@@ -3,7 +3,6 @@ import Sessions from './Sessions'
 import Navbar from './Navbar'
 import CreateOrUpdateSession from './CreateOrUpdateSession'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import Home from './Home'
 import SessionDetails from './SessionDetails'
 
 let App = () => {
@@ -13,16 +12,13 @@ let App = () => {
         <Navbar />
         <div className="Sessions">
           <Switch>
-            <Route exact path='/'>
-              <Home />
-            </Route>
-            <Route exact path='/sessions'>
+            <Route exact path='/meditation/sessions'>
               <Sessions />
             </Route>
-            <Route exact path='/create'>
+            <Route exact path='/meditation/create'>
               <CreateOrUpdateSession editMode={false}/>
             </Route>
-            <Route exact path='/sessions/:id'>
+            <Route exact path='/meditation/sessions/:id'>
               <SessionDetails />
             </Route>
           </Switch>
