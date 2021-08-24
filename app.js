@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 8081
 
 app.use(cors(corsOptions))
 // send the react front end
-app.use(express.static('/home'))
+app.use(express.static(path.join(__dirname, 'home')))
 app.use(express.json())
 
 let logger = (req,res,next) => {
