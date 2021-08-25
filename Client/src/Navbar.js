@@ -9,7 +9,7 @@ let Navbar = () => {
           <Link to="/meditation/sessions">All Sessions</Link>
           <Link to="/meditation/create" style={{ 
             color: 'white', 
-            backgroundColor: '#f1356d',
+            backgroundColor: '#5983ff',
             borderRadius: '8px' 
           }}>New Session</Link>
         </div>

@@ -1,0 +1,20 @@
+.all-sessions-main {
+  max-width: 600px;
+  margin: 10px auto;
+  padding: 20px;
+  border-bottom: 1px solid #fafafa;
+}
+.session-in-list {
+  background: brown;
+  border-radius: 10px;
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.2);
+  width: 30%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.session-in-list h2,
+p {
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}

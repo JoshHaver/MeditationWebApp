@@ -9,7 +9,7 @@ export default function DisplaySingleSession({ session }) {
     let [isEditMode, setIsEditMode] = useState(false)
     let handleDelete = () => {
         axios.delete('https://joshhaver.com/meditation/api/v1/sessions/' + session.SessionID)
-        history.push('/sessions')
+        history.push('/meditation/sessions')
     }
     return (
         <div>

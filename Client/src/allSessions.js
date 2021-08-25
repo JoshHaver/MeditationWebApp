@@ -2,9 +2,10 @@ import { Link } from 'react-router-dom'
 import getHumanReadableDate from './getHumanReadableDate'
 let ShowAllSessions = ({ sessions }) => {
     return (
-        <div className="all-sessions">
+
+        <div className="all-sessions-main">
             {sessions.map((session) => (
-                <div className='all-sessions' key={session.SessionID}>
+                <div className='session-in-list' key={session.SessionID}>
                     <Link to={`/meditation/sessions/${session.SessionID}`} style={{ textDecoration: 'none' }}>
                         <h2>{getHumanReadableDate(session.dateMilliseconds)}</h2>
                         {session.sessionLength && <p>Session Length: {session.sessionLength}</p>}

@@ -1,14 +1,20 @@
 header {
   color: #faf9f6;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 40px;
   font-family: Arial, Helvetica, sans-serif;
 }
 header h1 {
   font-size: 50px;
+  font-family: "Mulish", sans-serif;
 }
 header h2 {
-  font-size: 30px;
+  padding: 10px;
+  border-bottom: 1px solid white;
+  margin: 10px auto;
+  display: table;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 60px;
 }
 .socials {
   text-align: center;
@@ -27,10 +33,10 @@ a {
 }
 
 body {
-  background-color: #242124;
+  background-color: #11161e;
 }
 .projects {
-  margin-top: 80px;
+  margin-top: 50px;
   text-align: center;
 }
 .projects p {
@@ -44,4 +50,12 @@ body {
   width: 150px;
   height: 150px;
   object-fit: cover;
+  box-shadow: 1px 3px 5px rgba(255, 255, 255, 0.2);
+}
+
+.about {
+  margin-top: 30px;
+  text-align: center;
+  color: #faf9f6;
+  font-family: Arial, Helvetica, sans-serif;
 }
