@@ -5,7 +5,7 @@ let ShowAllSessions = ({ sessions }) => {
         <div className="all-sessions">
             {sessions.map((session) => (
                 <div className='all-sessions' key={session.SessionID}>
-                    <Link to={`/sessions/${session.SessionID}`} style={{ textDecoration: 'none' }}>
+                    <Link to={`/meditation/sessions/${session.SessionID}`} style={{ textDecoration: 'none' }}>
                         <h2>{getHumanReadableDate(session.dateMilliseconds)}</h2>
                         {session.sessionLength && <p>Session Length: {session.sessionLength}</p>}
                         {session.sessionRating && <p>Session Rating: {session.sessionRating}</p>}
